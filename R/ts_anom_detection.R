@@ -64,7 +64,7 @@ AnomalyDetectionTs <- function(tempUrl, max_anoms = 0.10, direction = 'pos',
   
   # Check for supported inputs types
   #library(jsonlite)
-  x <- fromJSON(tempUrl)
+  x <- jsonlite::fromJSON(tempUrl)
   if(!is.data.frame(x)){
     stop("data must be a single data frame.")
   } else {
