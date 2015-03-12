@@ -56,7 +56,7 @@
 #' @seealso \code{\link{AnomalyDetectionVec}}
 #' @export
 #' 
-AnomalyDetectionTs <- function(tempUrl, max_anoms = 0.10, direction = 'pos', 
+AnomalyDetectionTs <- function(jsonString, max_anoms = 0.10, direction = 'pos', 
                                alpha = 0.05, only_last = NULL, threshold = 'None', 
                                e_value = FALSE, longterm = FALSE, plot = FALSE, 
                                y_log = FALSE, xlabel = '', ylabel = 'count', 
@@ -64,7 +64,7 @@ AnomalyDetectionTs <- function(tempUrl, max_anoms = 0.10, direction = 'pos',
   
   # Check for supported inputs types
   #library(jsonlite)
-  x <- jsonlite::fromJSON(tempUrl)
+  x <- jsonlite::fromJSON(jsonString)
   if(!is.data.frame(x)){
     stop("data must be a single data frame.")
   } else {
