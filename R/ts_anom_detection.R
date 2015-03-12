@@ -63,6 +63,7 @@ AnomalyDetectionTs <- function(x, max_anoms = 0.10, direction = 'pos',
                                title = NULL){
   
   # Check for supported inputs types
+  x <- as.data.frame(x);
   if(!is.data.frame(x)){
     stop("data must be a single data frame.")
   } else {
