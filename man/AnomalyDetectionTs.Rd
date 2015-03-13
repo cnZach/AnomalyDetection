@@ -9,7 +9,7 @@ AnomalyDetectionTs(x, max_anoms = 0.1, direction = "pos", alpha = 0.05,
   plot = F, y_log = F, xlabel = "", ylabel = "count", title = NULL)
 }
 \arguments{
-\item{x}{Time series as a two column data frame where the first column consists of the
+\item{x}{Time series as a two attributes' json String where the first column consists of the
 timestamps and the second column consists of the observations.}
 
 \item{max_anoms}{Maximum number of anomalies that S-H-ESD will detect as a percentage of the
